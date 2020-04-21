@@ -5,21 +5,17 @@ import {
     CancellationToken,
     Location,
     Uri,
-    window,
-    commands,
 } from "vscode";
 import {
     getCurrentLine,
     findImportPath,
     genImportRegExp,
-    dashesCamelCase,
     CamelCaseValues,
     isImportLineMatch,
     getWords,
     getPosition,
 } from "./utils";
 import * as path from "path";
-import * as fs from "fs";
 import * as _ from "lodash";
 
 export class CSSModuleDefinitionProvider implements DefinitionProvider {

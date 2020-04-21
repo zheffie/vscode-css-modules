@@ -1,4 +1,4 @@
-# VSCode CSS Modules
+# VSCode CSS Modules 2
 
 [![Build Status](https://travis-ci.org/clinyong/vscode-css-modules.svg?branch=master)](https://travis-ci.org/clinyong/vscode-css-modules)
 

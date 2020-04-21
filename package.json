@@ -1,7 +1,7 @@
 {
     "name": "vscode-css-modules",
-    "displayName": "CSS Modules",
-    "description": "Visual Studio Code extension for CSS Modules",
+    "displayName": "CSS Modules 2",
+    "description": "Visual Studio Code extension for CSS Modules. ",
     "version": "0.0.1",
     "publisher": "zheffie",
     "engines": {
@@ -38,6 +38,14 @@
                     ],
                     "default": false,
                     "description": "Transform classnames in autocomplete suggestions."
+                },
+                "cssModules.decorate": {
+                    "type": [
+                        "boolean",
+                        "string"
+                    ],
+                    "default": true,
+                    "description": "Decorate missing classes"
                 }
             }
         }

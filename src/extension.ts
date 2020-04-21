@@ -18,7 +18,6 @@ import { initializeDecorations } from "./Decorator";
 const extName = "cssModules";
 
 export function activate(context: ExtensionContext) {
-    initializeDecorations(context);
     const mode: DocumentFilter[] = [
         { language: "typescriptreact", scheme: "file" },
         { language: "javascriptreact", scheme: "file" },
@@ -29,7 +28,8 @@ export function activate(context: ExtensionContext) {
         "camelCase",
         false
     );
-
+    const decorateConfig: boolean = configuration.get("decorate", false);
+    if (decorateConfig) initializeDecorations(context);
     context.subscriptions.push(
         commands.registerCommand("cssModules.createclass", () =>
             CommandHandler(camelCaseConfig)

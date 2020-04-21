@@ -4,8 +4,10 @@
 
 Extension for [CSS Modules](https://github.com/css-modules/css-modules), which supports
 
-- autocomplete
-- go to definition
+-   autocomplete
+-   go to definition
+-   decorate non-existing classes
+-   create non-existing classes
 
 ## Demo
 
@@ -27,7 +29,7 @@ If you write `kebab-case` classes in css files, but want to get `camelCase` comp
 
 ```json
 {
-   "cssModules.camelCase": true
+    "cssModules.camelCase": true
 }
 ```
 

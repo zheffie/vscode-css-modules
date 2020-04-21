@@ -2,18 +2,18 @@
     "name": "vscode-css-modules",
     "displayName": "CSS Modules",
     "description": "Visual Studio Code extension for CSS Modules",
-    "version": "0.2.3",
-    "publisher": "clinyong",
+    "version": "0.0.1",
+    "publisher": "zheffie",
     "engines": {
         "vscode": "^1.5.0"
     },
     "categories": [
         "Other"
     ],
-    "homepage": "https://github.com/clinyong/vscode-css-modules",
+    "homepage": "https://github.com/zheffie/vscode-css-modules",
     "repository": {
         "type": "git",
-        "url": "https://github.com/clinyong/vscode-css-modules"
+        "url": "https://github.com/zheffie/vscode-css-modules"
     },
     "activationEvents": [
         "onLanguage:typescriptreact",
@@ -21,6 +21,12 @@
         "onLanguage:javascript"
     ],
     "contributes": {
+        "commands": [
+            {
+                "command": "cssModules.createclass",
+                "title": "Create CSS class"
+            }
+        ],
         "configuration": {
             "type": "object",
             "title": "CSS Modules Configuration",
@@ -40,19 +46,18 @@
     "scripts": {
         "vscode:prepublish": "tsc -p ./",
         "compile": "tsc -watch -p ./",
-        "preinstall": "cd .git/hooks && ln -sf ../../tools/checkTS pre-commit",
-        "postinstall": "node ./node_modules/vscode/bin/install",
         "test": "node ./node_modules/vscode/bin/test"
     },
     "devDependencies": {
         "@types/mocha": "^2.2.32",
         "@types/node": "^6.0.40",
         "mocha": "^2.3.3",
-        "typescript": "^2.0.3",
         "tslint": "^4.3.1",
-        "vscode": "^1.0.0"
+        "typescript": "^2.0.3",
+        "vscode-test": "^1.3.0"
     },
     "dependencies": {
+        "@types/vscode": "^1.30.0",
         "lodash": "^4.17.4"
     },
     "icon": "icon/css-modules.png"
